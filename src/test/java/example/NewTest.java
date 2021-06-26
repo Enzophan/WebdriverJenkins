@@ -19,7 +19,9 @@ public class NewTest {
 
     @BeforeTest
     public void beforeTest() {
-//        System.setProperty("webdriver.gecko.driver", "/home/nhan/Desktop/Git/automation/lib/geckodriver-v0.29.1-linux64/geckodriver");
+        String filePath = System.getProperty("user.dir") + "/geckodriver";
+        System.out.println("Working Directory = " + filePath);
+        System.setProperty("webdriver.gecko.driver", filePath);
         driver = new FirefoxDriver();
     }
 
