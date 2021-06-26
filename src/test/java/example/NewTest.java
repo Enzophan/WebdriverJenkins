@@ -1,7 +1,9 @@
 package example;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,10 +21,12 @@ public class NewTest {
 
     @BeforeTest
     public void beforeTest() {
-        String filePath = System.getProperty("user.dir") + "/geckodriver";
-        System.out.println("Working Directory = " + filePath);
-        System.setProperty("webdriver.gecko.driver", filePath);
-        driver = new FirefoxDriver();
+        FirefoxOptions opt = new FirefoxOptions();
+        opt.addArguments("headless");
+//        String filePath = System.getProperty("user.dir") + "/geckodriver";
+//        System.out.println("Working Directory = " + filePath);
+//        System.setProperty("webdriver.gecko.driver", filePath);
+        driver = new FirefoxDriver(opt);
     }
 
     @AfterTest
