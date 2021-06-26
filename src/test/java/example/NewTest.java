@@ -19,7 +19,7 @@ public class NewTest {
 
     @BeforeTest
     public void beforeTest() {
-        System.setProperty("webdriver.gecko.driver", "/home/nhan/Desktop/Git/automation/lib/geckodriver-v0.29.1-linux64/geckodriver");
+//        System.setProperty("webdriver.gecko.driver", "/home/nhan/Desktop/Git/automation/lib/geckodriver-v0.29.1-linux64/geckodriver");
         driver = new FirefoxDriver();
     }
 
