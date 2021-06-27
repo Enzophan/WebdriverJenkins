@@ -22,22 +22,20 @@ public class NewTest {
 
     @BeforeTest
     public void beforeTest() {
-//        FirefoxOptions opt = new FirefoxOptions();
-//        opt.addArguments("headless");
-//        String filePath = System.getProperty("user.dir") + "/geckodriver";
-//        System.out.println("Working Directory = " + filePath);
-//        System.setProperty("webdriver.gecko.driver", filePath);
-//        driver = new FirefoxDriver();
-
-        String filePath = System.getProperty("user.dir") + "/chromedriver";
+        String filePath = System.getProperty("user.dir") + "/geckodriver";
         System.out.println("Working Directory = " + filePath);
-        System.setProperty("webdriver.chrome.driver", filePath);
-        //ChromeOptions object
-        ChromeOptions opt = new ChromeOptions();
-        //headless parameter
-        opt.addArguments("headless");
-        // set parameter to Chrome driver
-        driver = new ChromeDriver(opt);
+        System.setProperty("webdriver.gecko.driver", filePath);
+        driver = new FirefoxDriver();
+
+//        String filePath = System.getProperty("user.dir") + "/chromedriver";
+//        System.out.println("Working Directory = " + filePath);
+//        System.setProperty("webdriver.chrome.driver", filePath);
+//        //ChromeOptions object
+//        ChromeOptions opt = new ChromeOptions();
+//        //headless parameter
+//        opt.addArguments("headless");
+//        // set parameter to Chrome driver
+//        driver = new ChromeDriver(opt);
     }
 
     @AfterTest
