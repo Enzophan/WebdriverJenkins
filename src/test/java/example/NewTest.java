@@ -25,7 +25,9 @@ public class NewTest {
         String filePath = System.getProperty("user.dir") + "/geckodriver";
         System.out.println("Working Directory = " + filePath);
         System.setProperty("webdriver.gecko.driver", filePath);
-        driver = new FirefoxDriver();
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
+        driver = new FirefoxDriver(options);
 
 //        String filePath = System.getProperty("user.dir") + "/chromedriver";
 //        System.out.println("Working Directory = " + filePath);
